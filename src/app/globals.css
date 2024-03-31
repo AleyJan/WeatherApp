@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/style.module.css */
+/* Add your CSS styles here */
+body {
+  background: #243856; /* Dark Blue (Background Color) */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#weather-container {
+  background: rgba(255, 255, 255, 0.3);
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+h2, label, p {
+  color: #ffffff; /* White (Text Color) */
+  margin: 8px 0;
+  font-size: 16px; /* Adjust font size for smaller screens */
+}
+
+input {
+  width: calc(100% - 16px);
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid #ffffff; /* White (Text Color) */
+  margin-top: 20px;
+}
+
+button {
+  background: #4a5568; /* Dark Gray (Primary Color) */
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100px;
+  font-size: 14px; /* Adjust font size for smaller screens */
+}
+
+button:hover {
+  background: #2d3748; /* Darker shade of gray on hover */
+}
+
+#temp-div p {
+  font-size: 20px; /* Adjust font size for smaller screens */
+  margin-top: -10px;
+}
+
+#weather-info {
+  font-size: 16px; /* Adjust font size for smaller screens */
+  margin-top: 10px;
+}
+
+.weather-icon {
+  width: 80px; /* Adjust icon size for smaller screens */
+  margin: 20px auto;
+}
+
+#hourly-forecast {
+  margin-top: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+  display: flex;
+  justify-content: center;
+}
+
+.hourly-item {
+  display: inline-block;
+  text-align: center;
+  width: 80px; /* Adjust width for hourly items for smaller screens */
+  margin: 10px;
+}
+
+.hourly-item img {
+  width: 40px; /* Adjust icon size for smaller screens */
+  height: 40px; /* Adjust icon size for smaller screens */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 480px) {
+  #weather-container {
+      max-width: 100%;
+  }
+
+  .hourly-item {
+      width: 60px; /* Further adjust width for smaller screens */
+  }
+
+  .hourly-item img {
+      width: 30px; /* Further adjust icon size for smaller screens */
+      height: 30px; /* Further adjust icon size for smaller screens */
+  }
+}
